@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "mobile-tests-lesson-13"
+version = "0.1.0"
+description = "mobile end-to-end testing on browserstack with selene + appium + pytest"
+authors = ["yashaka <yashaka@gmail.com>"]
+license = "MIT"
+packages = [{include = "mobile_tests_lesson_13"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+selene = {version = "^2.0.0-beta.8", allow-prereleases = true}
+Appium-Python-Client = "^2.6.1"
+pytest = "^7.1.3"
+pytest-xdist = "^2.5.0"
+allure-pytest = "^2.10.0"
+requests = "^2.28.1"
+pydantic = "^1.10.2"
+python-dotenv = "^0.21.0"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+skip-string-normalization = true
