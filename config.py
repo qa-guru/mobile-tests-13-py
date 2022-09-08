@@ -36,7 +36,11 @@ class Settings(pydantic.BaseSettings):
         options = UiAutomator2Options()
         options.device_name = self.deviceName
         options.platform_name = self.platformName
-        options.app = self.app
+        options.app = (
+            assist.file.abs_path_from_project(self.app)
+            if self.app.startswith('./') or self.app.startswith('../')
+            else self.app
+        )
         if 'hub.browserstack.com' in self.remote_url:
             options.load_capabilities(
                 {
