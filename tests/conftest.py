@@ -26,7 +26,7 @@ def driver_management():
     # - and official allure docs for python:
     #   - https://docs.qameta.io/allure#_attachments_5
 
-    # session_id = assist.webdriver.get_session_id();
+    # session_id = utils.webdriver.get_session_id();
 
     # attach.screenshot_as("Last screenshot");
     # attach.page_source();

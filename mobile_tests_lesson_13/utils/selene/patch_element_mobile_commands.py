@@ -3,7 +3,7 @@ An example of extending Selene with custom commands, specific to mobile context
 """
 from selene.core.entity import Element
 
-from mobile_tests_lesson_13.assist.python import monkey
+from mobile_tests_lesson_13.utils.python import monkey
 
 
 @monkey.patch_method_in(Element)

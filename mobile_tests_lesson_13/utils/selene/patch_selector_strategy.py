@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 import re
 
 import config
-from mobile_tests_lesson_13.assist.python import monkey
+from mobile_tests_lesson_13.utils.python import monkey
 
 
 def is_word_with_dashes_underscores_or_numbers(selector):
