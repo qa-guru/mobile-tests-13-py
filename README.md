@@ -17,3 +17,21 @@
 ### Demo Simple Framework
 
 TODO: document rest of the demo
+
+Prerequisites:
+- to run tests locally – download wikipedia app apk from https://github.com/wikimedia/apps-android-wikipedia/releases/tag/latest
+
+Examples of usage:
+
+to run with config.local.env:
+
+```bash
+pytest tests/android/patched_style/test_wikipedia.py --alluredir reports/
+```
+
+to run with config.personal.env (create it first):
+```bash
+env -S 'context=personal' pytest tests/android/patched_style/test_wikipedia.py --alluredir reports/
+```
+
+
