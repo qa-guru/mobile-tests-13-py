@@ -47,7 +47,7 @@ class Settings(pydantic.BaseSettings):
             options.platform_name = self.platformName
         options.app = (
             utils.file.abs_path_from_project(self.app)
-            if self.app.startswith('./') or self.app.startswith('../')
+            if self.app and (self.app.startswith('./') or self.app.startswith('../'))
             else self.app
         )
         options.new_command_timeout = self.newCommandTimeout
