@@ -91,7 +91,7 @@ Notice that there is no `appium:` prefix for some capabilities, that it's Ok to 
 #### How to stream the connected real device screen at your desktop?
 
 Use Scrcpy app ;). See [Documentation](https://github.com/Genymobile/scrcpy) | 
-[Download scrcpy for Windows](https://github.com/Genymobile/scrcpy/releases/download/v1.25/scrcpy-win64-v1.25.zip)
+[Downloads](https://github.com/Genymobile/scrcpy/releases/)
 
 #### How to run the english version of a mobile application on your device?
 
