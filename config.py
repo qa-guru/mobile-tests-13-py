@@ -22,8 +22,20 @@ class Settings(pydantic.BaseSettings):
     buildName: Optional[str] = None
     sessionName: Optional[str] = None
     # --- > > BrowserStack credentials---
+    userName: Optional[str] = pydantic.Field(None, env='browserstack.userName')
+    accessKey: Optional[str] = pydantic.Field(None, env='browserstack.accessKey')
+    '''
+    # will work only on mac os or linux:
     userName: Optional[str] = None
     accessKey: Optional[str] = None
+    
+    # will work both on mac os with userName as env var name, 
+    # and on windows with 'browserstack.userName' var name
+    userName: Optional[str] = pydantic.Field(None, env=['browserstack.userName', 'userName'])
+    accessKey: Optional[str] = pydantic.Field(None, env=['browserstack.accessKey', 'accessKey'])
+    
+    # see more in docs: https://docs.pydantic.dev/usage/settings/#environment-variable-names
+    '''
 
     # --- Remote Driver ---
     remote_url: str = 'http://127.0.0.1:4723/wd/hub'  # it's a default appium server url
